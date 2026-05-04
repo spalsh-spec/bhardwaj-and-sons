@@ -265,6 +265,51 @@
   }
   .standard p{font-size:1rem;margin:0;max-width:36rem}
 
+  /* ─── Method section ───────────────────────────────────────── */
+  .method-row{
+    display:grid;
+    grid-template-columns:14rem 1fr;
+    gap:3rem;
+    padding:3rem 0;
+    border-bottom:1px solid var(--rule);
+    align-items:start;
+  }
+  .method-row:first-of-type{border-top:1px solid var(--rule)}
+  .method-row .deva-cite{
+    font-family:"Sanskrit Text","Adobe Devanagari","Noto Serif Devanagari",serif;
+    font-size:1.4rem;
+    color:var(--gold);
+    line-height:1.4;
+    letter-spacing:.02em;
+  }
+  .method-row .source{
+    display:block;
+    margin-top:.6rem;
+    font-family:"Helvetica Neue",sans-serif;
+    font-size:.7rem;
+    letter-spacing:.18em;
+    color:var(--ink-faint);
+    text-transform:uppercase;
+    font-weight:600;
+  }
+  .method-row .principle{
+    font-size:1.6rem;
+    line-height:1.35;
+    color:var(--ink);
+    font-style:italic;
+    margin-bottom:.8rem;
+  }
+  .method-row .interpret{
+    font-size:1rem;
+    color:var(--ink-soft);
+    margin:0;
+    max-width:34rem;
+  }
+  @media (max-width:640px){
+    .method-row{grid-template-columns:1fr;gap:1rem;padding:2rem 0}
+    .method-row .principle{font-size:1.3rem}
+  }
+
   /* ─── Commitment / philanthropy section ────────────────────── */
   .commitment{
     background:var(--paper-deep);
@@ -341,6 +386,7 @@
     <a href="#heritage">Heritage</a>
     <a href="#work">Work</a>
     <a href="#standards">Standards</a>
+    <a href="#method">Method</a>
     <a href="#commitment">Commitment</a>
   </div>
 </nav>
@@ -473,6 +519,84 @@
           <h3>Earned, never claimed.</h3>
           <p>Heritage is a debt to the past, not a credential. The house signs no work it did not build.</p>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Method ──────────────────────────────────────────────── -->
+<section id="method">
+  <div class="container">
+    <p class="eyebrow">Method of the House</p>
+    <h2>Old principles, exactly applied. <em>Nothing original here, except the discipline.</em></h2>
+
+    <p class="lead">
+      Four texts shape how we work. They are roughly two thousand five hundred years older than us.
+      We did not choose them to look ancient. We chose them because the principles inside them are
+      what good engineering already does, named correctly.
+    </p>
+
+    <div class="method-row">
+      <div>
+        <div class="deva-cite">कर्मण्येवाधिकारस्ते<br>मा फलेषु कदाचन</div>
+        <span class="source">Bhagavad Gītā · 2.47</span>
+      </div>
+      <div>
+        <p class="principle">"You have the right to action only — never to its fruits."</p>
+        <p class="interpret">
+          We ship the work and let time decide its outcome. Forecasts and valuations are not the
+          measure; whether the work survives verification is. This is why every artifact we
+          publish has a thirty-second demonstration anyone can run, and why we never ship a claim
+          before the proof.
+        </p>
+      </div>
+    </div>
+
+    <div class="method-row">
+      <div>
+        <div class="deva-cite">साम · दान<br>भेद · दण्ड</div>
+        <span class="source">Kauṭilya · Arthaśāstra · Bk II</span>
+      </div>
+      <div>
+        <p class="principle">Sāma, dāna, bheda, daṇḍa — escalate in this order, never reverse.</p>
+        <p class="interpret">
+          Begin every relationship — customer, collaborator, critic — at sāma: shared interest.
+          Escalate to dāna (concession) only when shared interest is exhausted. Bheda and daṇḍa
+          are last instruments because they are most expensive. The house has never opened with
+          force, and never will.
+        </p>
+      </div>
+    </div>
+
+    <div class="method-row">
+      <div>
+        <div class="deva-cite">आ नो भद्राः क्रतवो<br>यन्तु विश्वतः</div>
+        <span class="source">Ṛgveda · I.89.1</span>
+      </div>
+      <div>
+        <p class="principle">"Let noble thoughts come to us from every direction."</p>
+        <p class="interpret">
+          The work is open-source by design. We accept correction from any source — graduate
+          students, regulators, hostile reviewers, anonymous internet commenters. The point is
+          for the methodology to become better than its author. Authorship is a debt to the work,
+          not an entitlement to it.
+        </p>
+      </div>
+    </div>
+
+    <div class="method-row">
+      <div>
+        <div class="deva-cite">सत्यमेव जयते<br>नानृतम्</div>
+        <span class="source">Muṇḍaka Upaniṣad · 3.1.6</span>
+      </div>
+      <div>
+        <p class="principle">"Truth alone triumphs — not falsehood."</p>
+        <p class="interpret">
+          We commit to never publishing a claim that we do not believe will survive falsification.
+          When our own results fail to survive, we publish that too. The first work shipped by
+          the house publicly retracted its own pre-fix numbers; that retraction is what earned
+          the validated numbers their weight.
+        </p>
       </div>
     </div>
   </div>
