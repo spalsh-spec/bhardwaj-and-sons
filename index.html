@@ -382,32 +382,69 @@
     nav.top a{margin-left:1.25rem;font-size:.65rem}
   }
 
+  /* ─── Tablet ───────────────────────────────────────────────── */
+  @media (max-width:900px){
+    nav.top a{margin-left:1.25rem;font-size:.65rem}
+  }
+
   /* ─── Mobile ───────────────────────────────────────────────── */
   @media (max-width:640px){
+    body, html{overflow-x:hidden;width:100%}
     section{padding:5rem 0}
-    .container{padding:0 1.25rem;width:100%;overflow-x:hidden}
-    nav.top{padding:1rem 1.25rem;flex-wrap:wrap}
+    .container{padding:0 1.5rem;width:100%;max-width:100%}
+    nav.top{padding:1rem 1.5rem;flex-wrap:wrap}
     /* Hide nav links on mobile to prevent overflow; brand mark + scroll handles navigation */
     nav.top div{display:none}
-    .hero{min-height:auto;padding:8rem 0 5rem}
-    .hero-mark{font-size:.7rem;letter-spacing:.3em;margin-bottom:2rem;word-spacing:.1em}
-    .hero h1{font-size:2.6rem;line-height:1.05}
-    .hero .deva-stamp{font-size:1.3rem;margin:1.2rem 0}
-    .hero .tagline{font-size:1rem}
+
+    /* HERO — aggressively scaled to fit 375px viewport */
+    .hero{min-height:auto;padding:7rem 0 4rem;text-align:center}
+    .hero-mark{font-size:.65rem;letter-spacing:.25em;margin-bottom:2rem;word-spacing:.05em}
+    .hero h1{font-size:2.1rem;line-height:1.1;padding:0 .5rem;hyphens:none;word-wrap:break-word}
+    .hero h1 em{display:inline}
+    .hero .deva-stamp{font-size:1.2rem;margin:1.2rem 0;padding:0 1rem}
+    .hero .tagline{font-size:.95rem;padding:0 1rem;max-width:100%}
     .hero .tagline br{display:none}
-    .hero .est{position:static;margin-top:3rem;font-size:.55rem;letter-spacing:.25em}
-    h2{font-size:1.85rem}
-    .pull{font-size:1.1rem;padding-left:1rem}
-    .timeline-row{grid-template-columns:1fr;gap:.5rem}
-    .standard{grid-template-columns:3rem 1fr;gap:1rem}
-    .standard .num{font-size:1.8rem}
-    .standard h3{font-size:1.15rem}
-    .method-row .deva-cite{font-size:1.15rem}
-    .method-row .principle{font-size:1.15rem}
+    .hero .est{
+      position:static;margin-top:2.5rem;
+      font-size:.5rem;letter-spacing:.2em;
+      padding:0 1rem;line-height:1.6;
+    }
+
+    /* Section headers + body */
+    .eyebrow{font-size:.6rem;letter-spacing:.22em}
+    h2{font-size:1.6rem;line-height:1.2}
+    p{font-size:1rem}
+    p.lead{font-size:1.1rem;line-height:1.5}
+    .pull{font-size:1.05rem;padding-left:1rem;margin:2rem 0}
+
+    /* Timeline */
+    .timeline-row{grid-template-columns:1fr;gap:.5rem;padding:1.5rem 0}
+    .timeline-row .when{padding-top:0;font-size:.65rem}
+
+    /* Standards */
+    .standard{grid-template-columns:2.5rem 1fr;gap:.75rem;padding:2rem 0}
+    .standard .num{font-size:1.6rem}
+    .standard h3{font-size:1.1rem}
+
+    /* Method */
+    .method-row{grid-template-columns:1fr;gap:.75rem;padding:2rem 0}
+    .method-row .deva-cite{font-size:1.1rem}
+    .method-row .principle{font-size:1.15rem;line-height:1.4}
+    .method-row .interpret{font-size:.95rem}
+
+    /* Footer */
     footer{padding:3rem 0 2rem}
+    footer .container{padding:0 1.5rem}
     footer .grid{grid-template-columns:1fr;gap:2rem;margin-bottom:2rem}
-    body, html{overflow-x:hidden}
-    * {max-width:100%}
+
+    /* Universal safety */
+    *{max-width:100%;box-sizing:border-box}
+  }
+
+  /* ─── Very small phones (iPhone SE, 320px) ────────────────────── */
+  @media (max-width:380px){
+    .hero h1{font-size:1.85rem}
+    .hero .est{font-size:.45rem;letter-spacing:.18em}
   }
 </style>
 </head>
