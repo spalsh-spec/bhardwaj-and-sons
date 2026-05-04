@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bhardwaj &amp; Sons — A house of standards</title>
+<meta name="description" content="Bhardwaj & Sons is a house of standards. We build the methodologies, the libraries, and the audits that the next century of intelligent systems will be measured by.">
+<link rel="canonical" href="https://bhardwajandsons.com/">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://bhardwajandsons.com/">
+<meta property="og:title" content="Bhardwaj & Sons — A house of standards">
+<meta property="og:description" content="A house of standards. We build the methodologies, libraries, and audits that the next century of intelligent systems will be measured by.">
+<meta property="og:image" content="https://bhardwajandsons.com/og-image.png">
+
+<style>
+  /* ─── Reset ───────────────────────────────────────────────── */
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{font-size:17px;scroll-behavior:smooth;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  img,svg{display:block;max-width:100%}
+
+  /* ─── Palette + type ──────────────────────────────────────── */
+  :root{
+    --paper:#f3eee5;        /* warm ivory — Hermès-adjacent */
+    --paper-deep:#ebe4d6;   /* slightly deeper paper for sections */
+    --ink:#1c1611;          /* near-black with warmth */
+    --ink-soft:#3d342a;
+    --ink-faint:#7a6f63;
+    --rule:#cbbfa8;
+    --accent:#9c4a1a;       /* deep saffron — earned, not loud */
+    --accent-deep:#5e2a0e;
+    --gold:#9d8147;         /* secondary accent for ornament */
+  }
+
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Garamond","EB Garamond","Adobe Garamond Pro",Georgia,"Times New Roman",serif;
+    line-height:1.55;
+    overflow-x:hidden;
+  }
+
+  .sans{font-family:"Helvetica Neue","Helvetica","Arial",sans-serif}
+  .deva{font-family:"Sanskrit Text","Adobe Devanagari","Noto Serif Devanagari","Sanskrit 2003",serif}
+
+  /* ─── Layout ──────────────────────────────────────────────── */
+  .container{
+    max-width:60rem;
+    margin:0 auto;
+    padding:0 2rem;
+  }
+
+  section{
+    padding:8rem 0;
+    border-bottom:1px solid var(--rule);
+  }
+  section:last-of-type{border-bottom:none}
+
+  .eyebrow{
+    font-family:"Helvetica Neue",sans-serif;
+    font-size:.7rem;
+    letter-spacing:.28em;
+    text-transform:uppercase;
+    color:var(--accent);
+    margin-bottom:1.5rem;
+    font-weight:600;
+  }
+
+  /* ─── Top nav ──────────────────────────────────────────────── */
+  nav.top{
+    position:absolute;
+    top:0;left:0;right:0;
+    padding:2rem;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:10;
+  }
+  nav.top .mark{
+    font-family:"Garamond",serif;
+    font-size:1rem;
+    letter-spacing:.05em;
+    color:var(--ink);
+  }
+  nav.top a{
+    font-family:"Helvetica Neue",sans-serif;
+    font-size:.7rem;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    text-decoration:none;
+    margin-left:2rem;
+  }
+  nav.top a:hover{color:var(--accent)}
+
+  /* ─── Hero ─────────────────────────────────────────────────── */
+  .hero{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding:0;
+    text-align:center;
+    position:relative;
+  }
+  .hero-mark{
+    font-family:"Garamond",serif;
+    font-size:1rem;
+    letter-spacing:.4em;
+    color:var(--ink-faint);
+    margin-bottom:3rem;
+    text-transform:uppercase;
+  }
+  .hero-mark span{color:var(--accent);font-style:italic;text-transform:none;letter-spacing:.05em;font-size:1.1rem;margin:0 .35rem}
+  .hero h1{
+    font-size:clamp(3.5rem,9vw,7rem);
+    font-weight:400;
+    letter-spacing:-.01em;
+    line-height:1;
+    margin-bottom:2rem;
+  }
+  .hero h1 em{
+    font-style:italic;
+    color:var(--accent);
+    font-weight:400;
+  }
+  .hero .tagline{
+    font-size:clamp(1rem,1.4vw,1.2rem);
+    color:var(--ink-soft);
+    font-style:italic;
+    letter-spacing:.02em;
+    max-width:30rem;
+    margin:0 auto;
+  }
+  .hero .est{
+    position:absolute;
+    bottom:3rem;
+    left:0;right:0;
+    text-align:center;
+    font-family:"Helvetica Neue",sans-serif;
+    font-size:.65rem;
+    letter-spacing:.4em;
+    color:var(--ink-faint);
+    text-transform:uppercase;
+  }
+  .hero .deva-stamp{
+    font-family:"Sanskrit Text","Adobe Devanagari","Noto Serif Devanagari",serif;
+    font-size:1.6rem;
+    color:var(--gold);
+    margin:1.5rem 0;
+    letter-spacing:.05em;
+  }
+
+  /* ─── Section headers ──────────────────────────────────────── */
+  h2{
+    font-size:clamp(2rem,4vw,3rem);
+    font-weight:400;
+    letter-spacing:-.005em;
+    line-height:1.15;
+    margin-bottom:2rem;
+    color:var(--ink);
+  }
+  h2 em{font-style:italic;color:var(--accent)}
+
+  /* ─── Body text ────────────────────────────────────────────── */
+  p{
+    font-size:1.1rem;
+    line-height:1.7;
+    color:var(--ink-soft);
+    margin-bottom:1.4rem;
+    max-width:42rem;
+  }
+  p.lead{
+    font-size:1.35rem;
+    line-height:1.55;
+    color:var(--ink);
+    font-style:italic;
+    margin-bottom:2.5rem;
+  }
+  p strong{color:var(--ink);font-weight:600;font-style:normal}
+
+  /* ─── Heritage timeline ────────────────────────────────────── */
+  .timeline{
+    margin-top:4rem;
+    border-top:1px solid var(--rule);
+  }
+  .timeline-row{
+    display:grid;
+    grid-template-columns:8rem 1fr;
+    gap:2rem;
+    padding:2rem 0;
+    border-bottom:1px solid var(--rule);
+  }
+  .timeline-row .when{
+    font-family:"Helvetica Neue",sans-serif;
+    font-size:.75rem;
+    letter-spacing:.15em;
+    color:var(--accent);
+    text-transform:uppercase;
+    padding-top:.4rem;
+    font-weight:600;
+  }
+  .timeline-row h3{
+    font-size:1.3rem;
+    font-weight:400;
+    margin-bottom:.5rem;
+    color:var(--ink);
+    font-style:italic;
+  }
+  .timeline-row p{
+    font-size:1rem;
+    margin:0;
+    color:var(--ink-soft);
+  }
+
+  /* ─── Pull quotes ──────────────────────────────────────────── */
+  .pull{
+    border-left:2px solid var(--accent);
+    padding:0 0 0 2rem;
+    margin:3rem 0;
+    font-family:"Garamond",serif;
+    font-size:1.4rem;
+    font-style:italic;
+    color:var(--ink);
+    line-height:1.5;
+  }
+  .pull cite{
+    display:block;
+    margin-top:1rem;
+    font-size:.9rem;
+    font-style:normal;
+    color:var(--ink-faint);
+    letter-spacing:.05em;
+  }
+
+  /* ─── Cards (for Standards section) ────────────────────────── */
+  .standards{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:0;
+    margin-top:3rem;
+  }
+  .standard{
+    padding:2.5rem 0;
+    border-top:1px solid var(--rule);
+    display:grid;
+    grid-template-columns:5rem 1fr;
+    gap:2rem;
+  }
+  .standard:last-child{border-bottom:1px solid var(--rule)}
+  .standard .num{
+    font-family:"Garamond",serif;
+    font-size:2.5rem;
+    font-style:italic;
+    color:var(--accent);
+    line-height:1;
+  }
+  .standard h3{
+    font-size:1.4rem;
+    font-weight:400;
+    margin-bottom:.75rem;
+    color:var(--ink);
+  }
+  .standard p{font-size:1rem;margin:0;max-width:36rem}
+
+  /* ─── Commitment / philanthropy section ────────────────────── */
+  .commitment{
+    background:var(--paper-deep);
+    border-bottom:none;
+  }
+
+  /* ─── Footer ───────────────────────────────────────────────── */
+  footer{
+    background:var(--ink);
+    color:var(--paper);
+    padding:5rem 0 3rem;
+  }
+  footer .container{max-width:60rem}
+  footer .mark{
+    font-family:"Garamond",serif;
+    font-size:1.2rem;
+    letter-spacing:.05em;
+    margin-bottom:2rem;
+  }
+  footer .grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:3rem;
+    margin-bottom:3rem;
+  }
+  footer h4{
+    font-family:"Helvetica Neue",sans-serif;
+    font-size:.7rem;
+    letter-spacing:.25em;
+    text-transform:uppercase;
+    color:var(--paper);
+    opacity:.6;
+    margin-bottom:1rem;
+    font-weight:600;
+  }
+  footer a{
+    color:var(--paper);
+    text-decoration:none;
+    display:block;
+    margin-bottom:.6rem;
+    font-size:.95rem;
+    opacity:.85;
+  }
+  footer a:hover{opacity:1;color:var(--accent)}
+  footer .legal{
+    border-top:1px solid rgba(255,255,255,.15);
+    padding-top:2rem;
+    font-family:"Helvetica Neue",sans-serif;
+    font-size:.7rem;
+    letter-spacing:.1em;
+    opacity:.5;
+    text-align:center;
+  }
+  footer .legal .deva{font-style:normal;color:var(--accent);opacity:.9;font-size:.85rem;display:block;margin-bottom:.5rem;letter-spacing:.1em}
+
+  /* ─── Mobile ───────────────────────────────────────────────── */
+  @media (max-width:640px){
+    section{padding:5rem 0}
+    .container{padding:0 1.25rem}
+    nav.top{padding:1.25rem}
+    nav.top a{margin-left:1rem}
+    .hero h1{font-size:3rem}
+    .timeline-row{grid-template-columns:1fr;gap:.5rem}
+    .standard{grid-template-columns:3rem 1fr;gap:1rem}
+    footer .grid{grid-template-columns:1fr;gap:2rem}
+  }
+</style>
+</head>
+<body>
+
+<nav class="top">
+  <span class="mark">B<span style="color:var(--accent)">&amp;</span>S</span>
+  <div>
+    <a href="#heritage">Heritage</a>
+    <a href="#work">Work</a>
+    <a href="#standards">Standards</a>
+    <a href="#commitment">Commitment</a>
+  </div>
+</nav>
+
+<!-- ─── Hero ───────────────────────────────────────────────── -->
+<section class="hero">
+  <div class="container">
+    <p class="hero-mark">Bhardwaj <span>&amp;</span> Sons</p>
+    <h1>A house of <em>standards.</em></h1>
+    <div class="deva-stamp">सत्यमेव जयते</div>
+    <p class="tagline">
+      We build the methodologies, the libraries,<br>
+      and the audits by which the next century of<br>
+      intelligent systems will be measured.
+    </p>
+    <p class="est">Founded May 2026 &nbsp;·&nbsp; Melbourne &nbsp;·&nbsp; Trust-owned</p>
+  </div>
+</section>
+
+<!-- ─── Heritage ───────────────────────────────────────────── -->
+<section id="heritage">
+  <div class="container">
+    <p class="eyebrow">Heritage</p>
+    <h2>The lineage is older than the work. <em>The work earns the lineage.</em></h2>
+    <p class="lead">
+      The name carries a weight we did not invent. The Bharadvāja gotra is one of the seven
+      brahmanical lineages of the Vedic tradition, traced to the rishi who composed many of
+      the hymns of the sixth maṇḍala of the Ṛgveda.
+    </p>
+    <p>
+      We claim no inherited authority from this. The house was founded in 2026 by the
+      modern Bhardwaj family in Australia, owned through a private trust, and operates
+      under the standards we set ourselves. The lineage is on the wall to remind us what
+      the work has to live up to — not to substitute for it.
+    </p>
+
+    <div class="timeline">
+      <div class="timeline-row">
+        <span class="when">~1500 BCE</span>
+        <div>
+          <h3>Bharadvāja the rishi</h3>
+          <p>Composed many hymns of Ṛgveda Maṇḍala VI. The lineage from which the family takes its name.</p>
+        </div>
+      </div>
+      <div class="timeline-row">
+        <span class="when">~400 BCE</span>
+        <div>
+          <h3>Bharadvāja Smṛti</h3>
+          <p>Dharmaśāstra text in the lineage, codifying conduct that rests not on assertion but on evidence.</p>
+        </div>
+      </div>
+      <div class="timeline-row">
+        <span class="when">2026</span>
+        <div>
+          <h3>Bhardwaj &amp; Sons established</h3>
+          <p>Founded as a private trust by the Bhardwaj family. First work: a public falsification methodology for retrieval and ranking systems, released open-source.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Work ────────────────────────────────────────────────── -->
+<section id="work">
+  <div class="container">
+    <p class="eyebrow">First Work</p>
+    <h2><em>falsify-eval.</em> The missing test in AI evaluation.</h2>
+
+    <p class="lead">
+      Most AI systems today are graded on a method that cannot tell a real ranker from a predictor that just exploits the answer distribution. We built the patch.
+    </p>
+
+    <p>
+      The library is small. The discipline behind it is not. It implements a four-test
+      gate where the standard pipeline uses three — and the fourth catches a class of
+      false positives the field has been silently accepting for years. It is open-source
+      under the Apache 2.0 licence so it can become a standard rather than a product.
+    </p>
+
+    <div class="pull">
+      "Most retrieval-system papers report a single aggregate metric and call it a contribution. Three failure modes make this unsafe at any benchmark size, and dangerous on small ones. This library closes one of them."
+      <cite>— from the methodology preprint</cite>
+    </div>
+
+    <p>
+      Validated at ten thousand queries on an independent corpus. The complete library,
+      the benchmark suite, and the preprint are public:
+    </p>
+    <p style="margin-top:1.5rem;">
+      <a href="https://github.com/spalsh-spec/falsify-eval" style="color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent);font-weight:600;">github.com/spalsh-spec/falsify-eval &nbsp;→</a>
+    </p>
+  </div>
+</section>
+
+<!-- ─── Standards ───────────────────────────────────────────── -->
+<section id="standards">
+  <div class="container">
+    <p class="eyebrow">House Standards</p>
+    <h2>What we will not compromise on.</h2>
+
+    <p class="lead">
+      Four discipline-rules under which every piece of work the house ships is built. They are not aspirations. They are the conditions of the brand.
+    </p>
+
+    <div class="standards">
+      <div class="standard">
+        <span class="num">I.</span>
+        <div>
+          <h3>Open by default.</h3>
+          <p>The methodology is free, public, and citable. The implementation may be private; the standard never is. Free is the moat.</p>
+        </div>
+      </div>
+      <div class="standard">
+        <span class="num">II.</span>
+        <div>
+          <h3>Calibrated, never inflated.</h3>
+          <p>Every claim survives the four-null gate before it leaves the house. If a result will not survive verification, it is not shipped.</p>
+        </div>
+      </div>
+      <div class="standard">
+        <span class="num">III.</span>
+        <div>
+          <h3>Verifiable in thirty seconds.</h3>
+          <p>Every public artifact has a one-command demonstration. Trust is built on what the audience can prove, not on what we assert.</p>
+        </div>
+      </div>
+      <div class="standard">
+        <span class="num">IV.</span>
+        <div>
+          <h3>Earned, never claimed.</h3>
+          <p>Heritage is a debt to the past, not a credential. The house signs no work it did not build.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Commitment ──────────────────────────────────────────── -->
+<section id="commitment" class="commitment">
+  <div class="container">
+    <p class="eyebrow">Commitment</p>
+    <h2>A standing share to those who cannot pay for the work.</h2>
+
+    <p class="lead">
+      The house commits a defined share of every commercial contract to deploying AI and agentic tooling at no cost to non-profits, public-sector institutions, and underserved communities — beginning with India and Australia.
+    </p>
+
+    <p>
+      The figure, the recipients, and the audited use of the funds will be published
+      annually. We treat the commitment the way the methodology treats a benchmark
+      claim: nothing said that cannot be verified.
+    </p>
+
+    <p>
+      This is not a marketing line. It is a constraint we accept on every deal we close.
+      The brand exists in part to protect this commitment from the pressure of growth.
+    </p>
+  </div>
+</section>
+
+<!-- ─── Footer ──────────────────────────────────────────────── -->
+<footer>
+  <div class="container">
+    <div class="mark">Bhardwaj <span style="color:var(--accent)">&amp;</span> Sons</div>
+
+    <div class="grid">
+      <div>
+        <h4>House</h4>
+        <a href="#heritage">Heritage</a>
+        <a href="#work">First Work</a>
+        <a href="#standards">Standards</a>
+        <a href="#commitment">Commitment</a>
+      </div>
+      <div>
+        <h4>Work</h4>
+        <a href="https://github.com/spalsh-spec/falsify-eval">falsify-eval (library)</a>
+        <a href="https://spalsh-spec.github.io/blog/">Notes &amp; writing</a>
+        <a href="https://spalsh-spec.github.io/">Personal page</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="mailto:sparshsharma219@gmail.com">sparshsharma219@gmail.com</a>
+        <a href="https://github.com/spalsh-spec">GitHub</a>
+        <span style="color:var(--paper);opacity:.6;font-size:.85rem;">Melbourne, Australia</span>
+      </div>
+    </div>
+
+    <div class="legal">
+      <span class="deva">नेति &nbsp;·&nbsp; नेति</span>
+      © 2026 Bhardwaj &amp; Sons Trust. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
