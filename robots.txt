@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://bhardwajandsons.com/sitemap.xml
+Sitemap: https://spalsh-spec.github.io/bhardwaj-and-sons/sitemap.xml

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Bhardwaj &amp; Sons — A house of standards</title>
-<meta name="description" content="Bhardwaj & Sons is a house of standards. We build the methodologies, the libraries, and the audits that the next century of intelligent systems will be measured by.">
+<meta name="description" content="A house of standards. We build the methodologies, libraries, and audits by which the next century of intelligent systems will be measured.">
 <link rel="canonical" href="https://spalsh-spec.github.io/bhardwaj-and-sons/">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 
@@ -12,8 +12,20 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://spalsh-spec.github.io/bhardwaj-and-sons/">
 <meta property="og:title" content="Bhardwaj & Sons — A house of standards">
-<meta property="og:description" content="A house of standards. We build the methodologies, libraries, and audits that the next century of intelligent systems will be measured by.">
+<meta property="og:description" content="A house of standards. Methodologies, libraries, and audits for the next century of intelligent systems.">
 <meta property="og:image" content="https://spalsh-spec.github.io/bhardwaj-and-sons/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Bhardwaj & Sons. A house of standards. With Devanagari epigraph सत्यमेव जयते (truth alone triumphs).">
+<meta property="og:locale" content="en_AU">
+
+<!-- Twitter / X Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://spalsh-spec.github.io/bhardwaj-and-sons/">
+<meta name="twitter:title" content="Bhardwaj & Sons — A house of standards">
+<meta name="twitter:description" content="Methodologies, libraries, and audits for the next century of intelligent systems.">
+<meta name="twitter:image" content="https://spalsh-spec.github.io/bhardwaj-and-sons/og-image.png">
+<meta name="twitter:image:alt" content="Bhardwaj & Sons cover with Devanagari epigraph">
 
 <style>
   /* ─── Reset ───────────────────────────────────────────────── */
@@ -365,16 +377,37 @@
   }
   footer .legal .deva{font-style:normal;color:var(--accent);opacity:.9;font-size:.85rem;display:block;margin-bottom:.5rem;letter-spacing:.1em}
 
+  /* ─── Tablet ───────────────────────────────────────────────── */
+  @media (max-width:900px){
+    nav.top a{margin-left:1.25rem;font-size:.65rem}
+  }
+
   /* ─── Mobile ───────────────────────────────────────────────── */
   @media (max-width:640px){
     section{padding:5rem 0}
-    .container{padding:0 1.25rem}
-    nav.top{padding:1.25rem}
-    nav.top a{margin-left:1rem}
-    .hero h1{font-size:3rem}
+    .container{padding:0 1.25rem;width:100%;overflow-x:hidden}
+    nav.top{padding:1rem 1.25rem;flex-wrap:wrap}
+    /* Hide nav links on mobile to prevent overflow; brand mark + scroll handles navigation */
+    nav.top div{display:none}
+    .hero{min-height:auto;padding:8rem 0 5rem}
+    .hero-mark{font-size:.7rem;letter-spacing:.3em;margin-bottom:2rem;word-spacing:.1em}
+    .hero h1{font-size:2.6rem;line-height:1.05}
+    .hero .deva-stamp{font-size:1.3rem;margin:1.2rem 0}
+    .hero .tagline{font-size:1rem}
+    .hero .tagline br{display:none}
+    .hero .est{position:static;margin-top:3rem;font-size:.55rem;letter-spacing:.25em}
+    h2{font-size:1.85rem}
+    .pull{font-size:1.1rem;padding-left:1rem}
     .timeline-row{grid-template-columns:1fr;gap:.5rem}
     .standard{grid-template-columns:3rem 1fr;gap:1rem}
-    footer .grid{grid-template-columns:1fr;gap:2rem}
+    .standard .num{font-size:1.8rem}
+    .standard h3{font-size:1.15rem}
+    .method-row .deva-cite{font-size:1.15rem}
+    .method-row .principle{font-size:1.15rem}
+    footer{padding:3rem 0 2rem}
+    footer .grid{grid-template-columns:1fr;gap:2rem;margin-bottom:2rem}
+    body, html{overflow-x:hidden}
+    * {max-width:100%}
   }
 </style>
 </head>
