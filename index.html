@@ -467,7 +467,7 @@
     opacity:.85;
   }
   footer a:hover{opacity:1;color:var(--accent)}
-  footer .lega
+  footer .legal{
     border-top:1px solid rgba(255,255,255,.15);
     padding-top:2rem;
     font-family:"Helvetica Neue",sans-serif;
@@ -778,7 +778,7 @@
 <section id="services">
   <div class="container">
     <p class="eyebrow">Engagements</p>
-    <h2>Three ways the house works. <em>Three only.</em></h2>
+    <h2>Seven ways the house works. <em>Seven only.</em></h2>
 
     <p class="lead">
       We do not bill by the hour. We do not negotiate scope mid-engagement. We accept
@@ -856,6 +856,111 @@
         </div>
       </div>
 
+      <div class="tier">
+        <div>
+          <p class="label">IV — The Retrieval Engine</p>
+          <h3>Domain retrieval build.</h3>
+          <p class="price">From AUD $320,000 <small>· 10–14 weeks · fixed</small></p>
+        </div>
+        <div>
+          <p class="what">
+            We design and ship a production-grade retrieval engine for your specialist
+            corpus — legal, medical, financial, scientific, or any proprietary domain.
+            Built on the Vāk-Kaṇaja architecture: three-channel φ-RRF (semantic + lexical
+            + domain-specific), Docker-deployed, OpenAI-compatible API. Benchmarked against
+            BEIR baselines using the four-null gate before delivery. The engine belongs to
+            you; the methodology stays open.
+          </p>
+          <ul class="deliv">
+            <li>Production pipeline in your infrastructure (Docker, arm64/amd64)</li>
+            <li>Three-channel retrieval: semantic FAISS, BM25, domain-specific channel</li>
+            <li>falsify-eval gate applied at every benchmark milestone</li>
+            <li>OpenAI-compatible REST API with nine endpoints</li>
+            <li>Two-week engineering handover and corpus ingestion guide</li>
+          </ul>
+          <p class="terms">Payable in three milestones: signature, corpus-build, delivery.</p>
+        </div>
+      </div>
+
+      <div class="tier">
+        <div>
+          <p class="label">V — The Output Architecture</p>
+          <h3>Structured-output system design.</h3>
+          <p class="price">From AUD $180,000 <small>· 6–8 weeks · fixed</small></p>
+        </div>
+        <div>
+          <p class="what">
+            We design the prompting architecture that forces your LLM stack into
+            verifiable, schema-compliant outputs — and prove it holds across model scales.
+            Built from the Ākāśa Pantheon framework: schema definition, system-prompt
+            hardening, parse-time verification, and an empirical adherence benchmark
+            across your model fleet. The finding that format adherence is non-monotonic
+            in model scale is not a curiosity — it is a production risk most teams discover
+            too late.
+          </p>
+          <ul class="deliv">
+            <li>Bespoke schema definition for your output domain</li>
+            <li>System-prompt harness with parse-time verification</li>
+            <li>Adherence benchmark across your model fleet (N ≥ 100 runs)</li>
+            <li>Citation / reference auto-verification pipeline (where applicable)</li>
+            <li>Written report: per-model adherence rates, failure mode catalogue</li>
+          </ul>
+          <p class="terms">Payable 50% on signature, 50% on delivery.</p>
+        </div>
+      </div>
+
+      <div class="tier">
+        <div>
+          <p class="label">VI — The Corpus Infrastructure</p>
+          <h3>Specialist knowledge corpus.</h3>
+          <p class="price">From AUD $220,000 <small>· 6–10 weeks · fixed</small></p>
+        </div>
+        <div>
+          <p class="what">
+            We ingest, clean, embed, index, and serve your proprietary knowledge base at
+            production grade. Any format, any language, any domain. The universal corpus
+            adapter handles YAML-declared ingestion pipelines; FAISS indexing with int8
+            ONNX encoders for sub-100ms query latency; reproducible corpus state locked
+            by SHA-256 hash and git-commit integrity. The result is a queryable artifact
+            store your engineering team owns and can extend independently.
+          </p>
+          <ul class="deliv">
+            <li>Full ingestion pipeline from your source format to FAISS + SQLite</li>
+            <li>ONNX int8 semantic embeddings (multilingual, sub-100ms warm latency)</li>
+            <li>Reproducible corpus state lock (SHA-256 + git-commit integrity)</li>
+            <li>Query API with epistemic-status labelling per result</li>
+            <li>Complete corpus build documentation and re-ingestion runbook</li>
+          </ul>
+          <p class="terms">Payable in three milestones: signature, ingestion-complete, delivery.</p>
+        </div>
+      </div>
+
+      <div class="tier">
+        <div>
+          <p class="label">VII — The Scale Audit</p>
+          <h3>Model-scale behaviour audit.</h3>
+          <p class="price">From AUD $140,000 <small>· 4–6 weeks · fixed</small></p>
+        </div>
+        <div>
+          <p class="what">
+            We empirically audit how your AI system's behaviour changes as you move across
+            model scales. Schema adherence, citation accuracy, structured-output compliance,
+            and failure-mode distribution are measured across your model fleet under
+            controlled, reproducible conditions. The finding — that smaller models are more
+            obedient and larger models more accurate, but neither is uniformly safe — is
+            consistent enough to treat as a production constraint, not a research footnote.
+          </p>
+          <ul class="deliv">
+            <li>Cross-scale benchmark (minimum three model sizes, N ≥ 36 per model)</li>
+            <li>Format-adherence, citation-accuracy, and failure-mode analysis</li>
+            <li>Stochastic variance run to separate structural failure from noise</li>
+            <li>Per-model deployment recommendation with risk classification</li>
+            <li>Reproducible benchmark harness, owned by your team post-engagement</li>
+          </ul>
+          <p class="terms">Payable 50% on signature, 50% on delivery.</p>
+        </div>
+      </div>
+
     </div>
 
     <div class="engagement-note">
@@ -916,6 +1021,8 @@
       <div>
         <h4>Work</h4>
         <a href="https://github.com/spalsh-spec/falsify-eval">falsify-eval (library)</a>
+        <a href="https://github.com/spalsh-spec/vak-kanaja">vak-kanaja (retrieval engine)</a>
+        <a href="https://github.com/spalsh-spec/akasha-pantheon">akasha-pantheon (output framework)</a>
         <a href="https://spalsh-spec.github.io/blog/">Notes &amp; writing</a>
         <a href="https://spalsh-spec.github.io/">Personal page</a>
       </div>
